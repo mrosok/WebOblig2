@@ -258,6 +258,15 @@ abbr {
 .breadcrumb a {
 	text-decoration: none;
 }
+
+.code {
+	font-size: 1rem;
+}
+
+.code-presentation {
+	text-align: left;
+	margin-bottom: 20px;
+}
 /* ABOUT */
 
 .profile {
