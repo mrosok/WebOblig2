@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Math ML</title>
+	<script type="text/javascript" async
+  	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+</head>
+<body>
+	<h1>MathML</h1>
+
+	<p>MathML (Mathematical Markup Language) er et markup-språk lagd for å presentere matematisk og vitenskapelig innhold, f.eks på websider, i datasystemer, i trykking og i tekst-til-tale-programmer. Matematiske formler og figurer kan være kompliserte og visuelle. For tilgjengelighet er det dumt at slike figurer blir representert i bildeformater som PNG og GIF. MathML gjør at websider kan vise dette innholdet på en semantisk riktig måte.</p>
+
+	<p>Det finnes to forskjellige former for MathML. Content og Presentation. Disse har ulik oppbygning og forskjellige tagger. Content er mest brukt for talesyntese, mens Presentation er for visuell presentasjon. 
+
+	<p>MathML baserer seg på en litt mer "utilgivelig" form for XML  enn HMTL5. Det finnes ikke selv-lukkende tagger, alle tagger må ha en egen lukke-tag, f.eks. Dette gjør at språket er fullstendig utvetydig, noe som burde appellere til matematikere!</p>
+
+	<p>Browser-support for MathML er ikke helt i mål enda, men det finnes script og plugins man kan kjøre for å sikre at det vises riktig i alle browsere.</p>
+
+	<p>Eksempel på MathML:</p>
+
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+	  <mi>x</mi> <mo>=</mo>
+	  <mrow>
+	    <mfrac>
+	      <mrow>
+	        <mo>&#x2212;</mo>
+	        <mi>b</mi>
+	        <mo>&#x00B1;</mo>
+	        <msqrt>
+	          <msup><mi>b</mi><mn>2</mn></msup>
+	          <mo>&#x2212;</mo>
+	          <mn>4</mn><mi>a</mi><mi>c</mi>
+	        </msqrt>
+	      </mrow>
+	      <mrow> <mn>2</mn><mi>a</mi> </mrow>
+	    </mfrac>
+	  </mrow>
+	  <mtext>.</mtext>
+	</math>
+</body>
+</html>

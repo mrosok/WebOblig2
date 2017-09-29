@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="normalize.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|PT+Sans" rel="stylesheet" />
+	<script>
+		function accordion() {
+			console.log("knapp trukket");
+			var x = document.getElementById("accordion");
+			var y = document.getElementById("accordion-button");
+			if (x.className.indexOf("show") == -1) {
+				x.className = x.className.replace("hide", "");
+				x.className += "show";
+				y.innerHTML = y.innerHTML.replace("+", "-");
+			} else {
+				x.className = x.className.replace("show", "hide");
+				y.innerHTML = y.innerHTML.replace("-", "+");
+			}
+		}
+	</script> 
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="logo1.png">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li id="accordion-button" onclick="accordion()">Ressurser +
+					<ul id="accordion" class="hide">
+						<li><a href="webutvikling.html">Webutvikling</a></li>
+						<li><a href="infprog.html">InfProg</a></li>
+						<li><a href="grit.html">Grit</a></li>
+					</ul>
+				</li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner-self">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: Hjem\Om meg
+		</div>
+		<article class="single-article">
+            <h1>Hei!</h1>
+            <img src="martin1.jpg" alt="martin"/>
+            <p>Martin Røsok er pianist, IT-student og hobby-bartender.</p>
+                
+        </article>
+	</main>
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

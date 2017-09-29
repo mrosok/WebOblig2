@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="normalize.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|PT+Sans" rel="stylesheet" />
+	<script>
+		function accordion() {
+			console.log("knapp trukket");
+			var x = document.getElementById("accordion");
+			var y = document.getElementById("accordion-button");
+			if (x.className.indexOf("show") == -1) {
+				x.className = x.className.replace("hide", "");
+				x.className += "show";
+				y.innerHTML = y.innerHTML.replace("+", "-");
+			} else {
+				x.className = x.className.replace("show", "hide");
+				y.innerHTML = y.innerHTML.replace("-", "+");
+			}
+		}
+	</script> 
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="logo1.png">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li id="accordion-button" onclick="accordion()">Ressurser +
+					<ul id="accordion" class="hide">
+						<li><a href="webutvikling.html">Webutvikling</a></li>
+						<li><a href="infprog.html">InfProg</a></li>
+						<li><a href="grit.html">Grit</a></li>
+					</ul>
+				</li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<h1 class="main-header"> Obliger 2017</h1>
+		<div class="oblig-table">
+		<table>
+			<tr>
+				<th>Webutvikling</th><th>InfProg</th>
+			</tr>
+			<tr>
+				<td><a href="#">Oblig 1</a></td><td><a href="#">Oblig 1</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">Oblig 2</a></td><td><a href="#">Oblig 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">Oblig 3</a></td><td><a href="#">Oblig 3</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">Oblig 4</a></td><td><a href="#">Oblig 4</a></td>
+			</tr>	
+			<tr>
+				<td><a href="#">Oblig 5</a></td><td><a href="#">Oblig 5</a></td>
+			</tr>
+		</table>
+	</div>
+	</main>
+
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

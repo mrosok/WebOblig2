@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="normalize.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|PT+Sans" rel="stylesheet" />
+	<script>
+		function accordion() {
+			console.log("knapp trukket");
+			var x = document.getElementById("accordion");
+			var y = document.getElementById("accordion-button");
+			if (x.className.indexOf("show") == -1) {
+				x.className = x.className.replace("hide", "");
+				x.className += "show";
+				y.innerHTML = y.innerHTML.replace("+", "-");
+			} else {
+				x.className = x.className.replace("show", "hide");
+				y.innerHTML = y.innerHTML.replace("-", "+");
+			}
+		}
+	</script> 
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="logo1.png">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li id="accordion-button" onclick="accordion()">Ressurser +
+					<ul id="accordion" class="show">
+						<li><a href="webutvikling.html">Webutvikling</a></li>
+						<li><a href="infprog.html">InfProg</a></li>
+						<li><a href="grit.html">Grit</a></li>
+					</ul>
+				</li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: Hjem\Ressurser\GRIT
+		</div>
+		<h1 class="main-header">Grunnleggende IT</h1>
+		<p>Foreleser: Håkon Tolsby <a href="mailto://hakon.l.tolsby@hiof.no">[Epost]</a></p>
+		
+
+<h2>Oppgaver</h2>
+<ul class="links">
+	<li><a href="https://wiki.hiof.no/index.php/Martin_R%C3%B8sok">Oppgave 2 - wikiside</a></li>
+    <li><a href="files/oppgavesamlet.pdf">Oppgave 3 - superbrukere kan alt</a></li>
+    <li><a href="#">Oppgave 4 - Studieplan</a></li>
+    <li><a href="https://youtu.be/YVqYHlnr7tE">Oppgave 5 - Makerspace (video/youtube)</a></li>
+    <li><a href="#">Skriveøvelse - Personvern- og sikkerhetsutfordringer i Tingenes internett</a></li>
+</ul>
+
+<h2>Nyttige linker</h2>
+<ul class="links">
+	<li><a href="#">Nyttig nettsted #1</a></li>
+	<li><a href="#">Nyttig nettsted #2</a></li>
+	<li><a href="#">Nyttig nettsted #3</a></li>
+	<li><a href="#">Nyttig nettsted #4</a></li>
+	<li><a href="#">Nyttig nettsted #5</a></li>
+	<li><a href="#">Nyttig nettsted #6</a></li>
+		
+	</div>
+	</main>
+
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

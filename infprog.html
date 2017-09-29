@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="normalize.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|PT+Sans" rel="stylesheet" />
+	<script>
+		function accordion() {
+			console.log("knapp trukket");
+			var x = document.getElementById("accordion");
+			var y = document.getElementById("accordion-button");
+			if (x.className.indexOf("show") == -1) {
+				x.className = x.className.replace("hide", "");
+				x.className += "show";
+				y.innerHTML = y.innerHTML.replace("+", "-");
+			} else {
+				x.className = x.className.replace("show", "hide");
+				y.innerHTML = y.innerHTML.replace("-", "+");
+			}
+		}
+	</script> 
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="logo1.png">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li id="accordion-button" onclick="accordion()">Ressurser +
+					<ul id="accordion" class="show">
+						<li><a href="webutvikling.html">Webutvikling</a></li>
+						<li><a href="infprog.html">InfProg</a></li>
+						<li><a href="grit.html">Grit</a></li>
+					</ul>
+				</li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: Hjem\Ressurser\InfProg
+		</div>
+		<h1 class="main-header">Innføring i programmering</h1>
+		<p>Foreleser: Tom Heine Nätt <a href="mailto://tom.h.natt@hiof.no">[Epost]</a>
+		<table class="timeplan">
+		  <tr>
+		    <th>Tid</th>
+		    <th>Mandag</th>
+		    <th>Tirsdag</th>
+		    <th>Onsdag</th>
+		    <th>Torsdag</th>
+		    <th>Fredag</th>
+		  </tr>
+		  <tr>
+		    <td class="tid">08:15</td>
+		    <td rowspan="4" class="lab">Øvingstimer</td>
+		    <td rowspan="2" class="forelesning">Forelesning</td>
+		   	<td rowspan="4" class="lab">Øvingstimer</td>
+		    <td rowspan="2" class="lab">Øvingstimer</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td class="tid">09:15</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td class="tid">10:15</td>
+		    <td rowspan="5" class="lab">Øvingstimer</td>
+		    <td rowspan="2" class="forelesning">Forelesning</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td class="tid">11:15</td>
+		    <td rowspan="5" class="lab">Øvingstimer</td>
+		  </tr>
+		  <tr>
+		    <td class="tid">12:15</td>
+		    <td rowspan="2" class="forelesning">Forelesning</td>
+		    <td></td>
+		    <td rowspan="2" class="lab">Øvingstimer</td>
+		  </tr>
+		  <tr>
+		    <td class="tid">13:15</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td class="tid">14:15</td>
+		    <td></td>
+		    <td rowspan="2" class="forelesning">Forelesning</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td class="tid">15:15</td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		  </tr>
+</table>
+
+<h2>Nyttige Linker</h2>
+<ul class="links">
+	<li><a href="#">Nyttig nettsted #1</a></li>
+	<li><a href="#">Nyttig nettsted #2</a></li>
+	<li><a href="#">Nyttig nettsted #3</a></li>
+	<li><a href="#">Nyttig nettsted #4</a></li>
+	<li><a href="#">Nyttig nettsted #5</a></li>
+	<li><a href="#">Nyttig nettsted #6</a></li>
+</ul>
+		
+	</div>
+	</main>
+
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

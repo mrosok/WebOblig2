@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans" rel="stylesheet" />
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="img/logo1.png">
+		</div>
+		<nav id="mainmenu">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li><a href="#webutvikling">Webutvikling</a></li>
+				<li><a href="#infprog">Infprog</a></li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: <a href="index.html">Hjem\</a><a href="artikler.html">Artikler\</a>Webserver
+		</div>
+		<article class="single-article">
+        		<h1>FTP</h1>
+    			<p><abbr title="File Transfer Protocol">FTP</abbr> står for File Transfer Protocol, og er som navnet antyder en protokoll for å overføre filer i et datanettverk mellom en klient og en server. En webserver vil som regel alltid driftes sammen med en FTP-server med tilgang til samme filstruktur. Derfor kan vi bruke FTP når vi vil overføre filer slik at webserveren kan levere de. For å være litt pedantisk og teknisk korrekt, er det greit å være klar over at man ikke kobler seg opp til en "webserver" med FTP. Web (HTTP) og FTP er to forskjellige protokoller. Men så lenge de to serverene er satt opp til å vise samme filstruktur er FTP anvendelig for å endre innholdet på en webserver.</p>
+
+                <p>Det er mange måter vi kan ta i bruk FTP på. En av de vanligste er et dedikert FTP-program, gjerne kalt en FTP-klient. Eksempler på disse er FileZilla, FireFTP og WinSCP.<img class="img-responsive article-image" src="http://ask.hiof.no/~martr/webutvikling/oblig1/img/filezilla_small.jpg" alt="filezilla eksempel" width="400" /></a> Her vises et bilde av FileZilla, koblet opp til en server.</p>
+        
+    			<ul>
+    				<li><span class="purple">A:</span> Informasjon for adresse og pålogging til serveren. De fleste servere vil kreve autentisering.</li>
+    				<li><span class="blue">B:</span> Den lokale mappestrukturen. Her er filene og mappene som ligger på din egen datamaskin.</li>
+    				<li><span class="red">C:</span> Serverens mappestruktur. Her er alle filene og mappene som ligger på serveren du har koplet opp til.</li>
+    				<li><span class="green">D:</span> Loggføring av aktivitet. Her kan du se progresjonen av overføringer, hvilke overføringer som har blitt sluttført og evt om noen har feilet.</li>
+    			</ul>
+
+    			<p>Programmet fungerer ganske intuitivt ved at man kan klikke og dra filer og mapper fra din lokale maskin (A) til serveren (B) eller andre vei. Man kan også utføre samme operasjon gjennom høyre-klikkmenyer og verktøylinjen på topp. Man har også mulighet til å redigere filer direkte fra applikasjonen og man kan opprette nye mapper.<img class="img-responsive article-image" src="http://ask.hiof.no/~martr/webutvikling/oblig1/img/filezillasync_small.jpg" alt="filezilla eksempel" width="400" /></a>  Programmet har også en nyttig funksjon der den sammenligner innholdet mellom klient og server. Den vil da vise gjennom forskjellige farger om filer/mapper kun eksisterer på den ene siden, om filer er av nyere versjon på en side, eller om filstørrelsen er forskjellig. Dette er nyttig om man har et webside-prosjekt lagret både lokalt og på server, da den vil gi tydelig beskjed om små justeringer er synkronisert lokalt og eksternt. I eksempelet over viser FileZilla at filen på min lokale maskin er av nyere dato enn filen på server.</p>
+            </article>
+	</main>
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

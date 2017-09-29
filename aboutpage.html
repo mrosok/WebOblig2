@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<title>Om denne siden</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans" rel="stylesheet" />
+	
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="img/logo1.png">
+		</div>
+		<nav id="mainmenu">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li><a href="index.html#webutvikling">Webutvikling</a></li>
+				<li><a href="index.html#infprog">Infprog</a></li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: <a href="index.html">Hjem\</a><a href="artikler.html">Artikler\</a>Om denne siden
+		</div>
+		<article class="single-article">
+	        <h1>Om denne siden</h1>
+	        <span class="meta">29.09.2017 webutvikling</span>
+			<p>Etter å ha lest igjennom oppgaveteksten hadde jeg følgende spørsmål jeg måtte besvare før jeg kunne planlegge videre:
+				<br/>- Skal nettstedet inneholde mer enn det oppgaven ber om?
+				<br/>- Skal nettstedet være kun for eget bruk, eller skal det vises og brukes for andre?</p>
+
+			<p>Begge spørsmålene er vesentlige for planleggingsfasen. Det første var enkelt å bestemme seg for, da jeg tenkte at jeg burde gi plass til flere studieressurser enn bare webutvikling når jeg først er i gang med å lage et slikt nettsted. Så jeg bestemte meg for å inkludere infProg inn i nettstedet.</p>
+
+			<p><img class="article-image img-responsive" src="img/skisse1.jpg" alt="sitemap skisse" />Det andre spørsmålet er litt vanskeligere. En ting er at oppgaven skal besøkes og vurderes av medstudenter og lærere - det er i grunn en kunstig situasjon. Hvis målet er å lage et personlig ressursarkiv for meg selv uten å forvente noe annen trafikk, så ville jeg ikke trenge noe fancy eller pent. Bare all informasjonen jeg trenger ganske lett tilgjengelig.</p>
+
+			<p>Likevel så jeg et potensiale i dette prosjektet med nytteverdi utover den obligatoriske oppgaven. Jeg tenkte dette kunne være rammeverket for en portefølje, et nettsted der jeg kunne vist fram hva jeg har jobbet med. Da ville det være naturlig å legge mer flid inn i presentasjonsbiten, og i tillegg ha med noe mer personlig informasjon i form av en "om meg" side.</p>
+
+			<p>Etter å ha "visjonen" klar begynte jeg arbeidet med å skissere ned en "sitemap", en oversikt av hvilke deler nettstedet består av og hvordan de henger sammen hierarkisk. Jeg søkte etter andre personlige nettsteder for inspirasjon, både for struktur og design. Jeg gjorde noen grove skisser med utgangspunkt i en horisontal navigeringsmeny, og tenkte en stund på å gå den veien. Likevel valgte jeg til slutt å gå for en fixed-sidebar meny. Jeg hadde lagd sider med horisontal navigering og max-width, en-kolonnes, midtstilt design tidligere og ønsket å prøve noe nytt denne gangen. Jeg fant også flere sider på nett som jeg syns brukte dette på en fin måte.</p>
+
+			<p><img class="article-image img-responsive" src="img/skisse2.jpg" alt="webside skisse" />Den endelige skissen var i konseptet et design med tre kolonner. En fast-plassert meny, en hovedkolonne med de nyeste prosjektene (flexbox-rubrikker var planen), og en høyre kolonne med "supplement" i form av en liten profil av meg selv (med link til full profilside), og en seksjon med de viktigste fristene. De viktige fristene er jo viktige så jeg ville ha de synlig tidlig i forsiden, kanskje med den mest nærliggende fristen i rødt. Tanken var så at ressurser som timeplaner og linker osv. kunne få sine egne sider. Dette var utgangspunktet jeg tok når jeg satt meg ned for å kode. Jeg bestemte meg også for å bruke CSS Grid som rammeverket til layout.</p>
+
+			<p><img class="article-image img-responsive" src="img/wireframe.png" alt="wireframe" />Jeg ble gjort oppmerksom på at oppgaveteksten ba om at ressurser o.l skulle være på forsiden. Jeg fant ut at med CSS Grid var det ikke noe stort problem å legge til flere rader, og jeg syns det ble naturlig at informasjon om fagene falt i hovedkollonnen, mens linkearkivene kunne ligge i høyre sidefelt. Navigasjonsmenyer ble revidert etter denne beslutningen.</p>
+
+			<p>Etter obligen er levert og bedømt er det mulig jeg vil gjøre noen endringer, men jeg føler at dette designet per dags dato oppfyller oppgavekravene, og samtidig kan ekspanderes til et nettsted som kan leve i ettertid.</p>
+		</article>
+		<aside class="inspirasjon">
+			<h2>Sider brukt som inspirasjon</h2>
+			<table>
+				<tr>
+					<th>URL</th>
+					<th>Beskrivelse</th>
+				</tr>
+				<tr>
+					<td><a href="http://www.andreamann.com/">andreamann.com/</a></td>
+					<td>Selv om layout er ganske annerledes enn det jeg endte opp med, var denne siden en tidlig inspirasjon for en personlig nettside.</td>
+				</tr>
+				<tr>
+					<td><a href="http://mor10.com/">mor10.com</a></td>
+					<td>Morten Rand-Hendriksen oppdaget jeg når jeg gjorde CSS Grid research og hans hjemmeside var inspirasjonen til å bruke både grids og en fast sidebar</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.2creative.se/">2creative.se</a></td>
+					<td>Denne siden dukket opp når jeg undersøkte sidebar-oppsett, og jeg må innrømme jeg har stjelt menyoppsettet og fontene herfra (fontene er google fonts, no worries)</td>
+				</tr>
+				<tr>
+					<td><a href="https://designschool.canva.com/blog/website-color-schemes/">https://designschool.canva.com/blog/website-color-schemes/</a></td>
+					<td>Jeg brukte denne artikkelen som inspirasjon til å finne gode fargekombinasjoner</td>
+				</tr>
+			</table>
+		</aside>
+	</main>
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p>Om denne siden</p>
+	</footer>
+</div>
+</body>	
+</html>

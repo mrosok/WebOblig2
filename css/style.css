@@ -1,0 +1,469 @@
+/* GENERAL */
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background: #efefef;
+	margin: 0;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	color: #222;
+}
+
+body * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer, article, aside, nav, div {
+	display: block;
+	overflow: hidden;
+}
+
+h1 {font-size: 50px;}
+
+h2 {font-size: 1.61em;}
+
+h1, h2, h3 {
+	margin-bottom: 0.75rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: 900;
+}
+
+p, ul, table {
+	margin-bottom: 1rem;
+	line-height: 1.65;
+}
+
+.img-responsive {
+	max-width: 100%;
+}
+
+abbr {
+	text-decoration: none;
+}
+
+/* LAYOUT */
+
+.grid, .grid-single {
+	margin-left: 20%;
+	display: grid;
+	min-height: 100vh;
+}
+
+.grid {
+	grid-template-columns: 1fr minmax(276px, 25%);
+	grid-template-rows: 500px repeat(3, auto);
+	grid-template-areas:
+		"banner banner"
+		"articles about"
+		"webutvikling weblinks"
+		"infprog proglinks"
+		"footer footer";
+}
+
+.grid-single {
+	grid-template-columns: 1fr;
+	grid-template-rows: 200px repeat(3, auto);
+	grid-template-areas:
+		"banner"
+		"main"
+		"filler"
+		"footer";
+}
+
+.sidebar-left {
+	background: #233237;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 20%;
+	min-width: 231px;
+	height: 100%;
+	color: white;
+	text-align: right;
+}
+
+.banner, .banner-self {
+	background-image: url("../img/banner4.jpg");	
+	background-size: cover;
+	background-position: bottom;
+	grid-area: banner;
+}
+
+.banner-self {
+	background-image: url("../img/banner5.jpg");
+}
+
+.articles {
+	grid-area: articles;
+}
+
+.about {
+	grid-area: about;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.webutvikling {
+	grid-area: webutvikling;
+}
+
+.weblinks {
+	grid-area: weblinks;
+}
+
+.infprog {
+	grid-area: infprog;
+}
+
+.proglinks {
+	grid-area: proglinks;
+}
+
+.area {
+	padding: 1.5rem;
+}
+
+.course-container {
+	display: flex;	
+}
+
+.course-info {
+	flex-grow: 1;
+}
+
+.table-responsive {
+	flex-grow: 2;
+}
+
+/* SPECIFICS */
+
+/* LEFT SIDEBAR / NAVIGATION */
+.mast {
+	margin: 100px 0;
+	margin-right: 80px;
+}
+
+.mast img {
+	width: 150px;
+}
+
+#mainmenu {
+	line-height: 3em;
+	text-transform: uppercase;
+	margin-right: 80px;
+}
+
+#mainmenu ul {
+	list-style-type: none;
+}
+
+#mainmenu ul li a {
+	line-height: 3em;
+	text-decoration: none;
+	color: white;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+#accordion-button {
+	line-height: 3em;
+	cursor: pointer;
+}
+
+#accordion li a{
+	font-weight: 900;
+}
+
+#icon {
+	display: none;
+}
+
+/* ARTIKLER */
+
+.main-header {
+	line-height: 1;
+	margin-bottom: 1em;
+	margin-left: 0.5em;
+}
+
+.article-card-front, .article-card-index {
+	padding: 1.5rem;
+}
+
+.article-card-front {
+	width: 45%;
+}
+
+.article-card-index {
+	width: 30%;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.meta {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	color: #aaa;
+}
+
+.article-image {
+	float: right;
+	margin: 15px;
+	margin-right: 0;
+}
+
+.single-article, .inspirasjon {
+	margin: 1.5rem auto;
+	max-width: 800px;
+	font-size: 1.1em;
+	padding: 20px;
+}
+
+.inspirasjon {
+	grid-area: filler;
+}
+
+.breadcrumb {
+	margin: 1em;
+}
+
+.breadcrumb a {
+	text-decoration: none;
+}
+/* ABOUT */
+
+.profile {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.profile figure img {
+	border-radius: 50%;
+}
+
+.frister {
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+	grid-area: footer;
+	color: white;
+	background-color: #191919;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5em;
+}
+
+/* RESOURCE PAGES */
+
+.links {
+	list-style-type: none;
+}
+
+/* TABLES */
+
+#frister-table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#frister-table * {
+	padding: .5em;
+	border-bottom: 1px solid #ddd;
+}
+
+#frister-table tr:first-child {
+	color: red;
+}
+
+.oblig-table {
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.oblig-table table{
+	font-size: 26px;
+	padding: 1.5rem;
+	border: 1px solid;
+}
+
+.oblig-table table td {
+	width: 140px;
+	padding-left: 5px;
+}
+
+.timeplan {
+	font-size: 12px;
+}
+
+.timeplan, .timeplan td, .timeplan th {
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.timeplan td, .timeplan th {
+	padding: 0.1em 0.5em;
+}
+
+.tid {
+	font-style: oblique;
+}
+
+.lab {
+	background: lightblue;
+}
+
+.forelesning {
+	background: lightgreen;
+}
+
+.inspirasjon table tr:nth-child(odd) {
+	background: #ddd;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1400px) {
+
+	.article-card-front {
+		width: 100%;
+		margin-right: 5%;
+	}
+
+	.grid {
+		grid-template-rows: 300px auto auto;
+
+	}
+}
+
+@media screen and (max-width: 1240px) {
+
+	.table-responsive {
+		overflow-x: scroll;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+
+	.sidebar-left {
+		width: 100%;
+		position: static;
+		height: auto;
+
+	}
+
+	.mast {
+		display: none;
+	}
+	
+	#mainmenu {
+		margin: 0;
+	}
+
+	#mainmenu ul li {
+		float: left;
+		margin-left: 1.5rem;
+	}
+
+	.grid, .grid-single {
+	margin: 0;
+	display: initial;
+	}
+
+	.banner {
+		height: 200px;
+	}
+
+	.main-header {
+		font-size: 2.5em;
+		margin-top: 0;
+	}
+
+	.article-card {
+		width: 100%;
+		margin: 1rem;
+	}
+
+	/* .sidebar-right {
+		width: auto;
+		margin-bottom: 1.5em;
+		overflow: visible;
+	} */
+
+	.profile {
+		margin: 1.5em;
+	}
+	
+	.frister {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.frister table {
+		text-align: center;
+		border-collapse: collapse;
+		width: 50%;
+		border-bottom: 1.5em;
+	}
+
+	.single-article {
+		margin: 1.5rem auto;
+		width: 100%;
+		font-size: 1.1em;
+	}
+
+	.flex-container {
+		display: block;
+	}
+
+	.article-card-index {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+
+	nav ul li:not(:first-child) {
+		display: none;
+	}
+
+	#icon {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		display: block;
+		margin-right: 10px;		
+	}
+}
