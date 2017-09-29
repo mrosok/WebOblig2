@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test Grid</title>
+	<meta charset ="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans" rel="stylesheet" />
+</head>
+<body>
+	<header class="sidebar-left">
+		<div class="mast">
+			<img src="img/logo1.png">
+		</div>
+		<nav id="mainmenu">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="artikler.html">Artikler</a></li>
+				<li><a href="obliger.html">Obliger</a></li>
+				<li><a href="#webutvikling">Webutvikling</a></li>
+				<li><a href="#infprog">Infprog</a></li>
+				<li><a href="about.html">Om meg</a></li>
+				<li id="icon">&#9776;</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="grid-single">
+	<div class="banner">
+	</div>
+	<main>
+		<div class="breadcrumb">
+			Du er her: <a href="index.html">Hjem\</a><a href="artikler.html">Artikler\</a>Domener, DNS og URL
+		</div>
+		<article class="single-article">	
+                <h1>Domener, DNS og URL</h1>
+                
+                <p>En webserver har en <abbr title="Internet Protocol">IP</abbr>-adresse bestående av en sekvens med mange tall. Det er tungvint å huske på disse tallene når vi skal søke opp forskjellige websider, derfor bruker vi domenenavn i stedet. Et domenenavn er et lettleselig «alias» for en IP-adresse. Eksempelvis har VG sin webserver IP-adressen 195.88.55.16, mens domenenavnet er www.vg.no.</p>
+               
+                <p>Et domenenavn består av et hierarki av domener, alle med et punkt mellom seg. Det er ingen begrensninger på hvor mange domener et domenenavn kan inneholde, annet enn at hele domenenavnet ikke kan være lenger enn 253 tegn. I praksis kan domeneregistrarer sette begrensninger. Stort sett har vi mellom to og fire domener i domenenavnet. Hierarkiet er organisert fra høyre til venstre, med generelle beskrivelser til høyre og spesifikke beskrivelser til venstre. Alle domener er et subdomene til domenet på dets høyre side, men for enkelhets skyld har jeg i det illustrerte eksempelet valgt å definere bare det siste domenet i hierarkiet som subdomene.</p>
+
+                <p><img class="img-responsive article-image" src="http://ask.hiof.no/~martr/webutvikling/oblig1/img/domene.png" alt ="domene" width="400" />Helt til høyre finner vi det som kalles <em>toppnivådomene</em> (Top Level Domain). Det er flere kategorier av toppnivådomener, men de to vanligste beskriver generelle foremål og landskoder. Eksempler på generelle toppnivådomener er .com (komersielle), .gov (myndigheter i USA) og .edu (utdanning). Eksempler på landskoder er .no (Norge), .cu (Cuba) og .vn (Vietnam). Klassifiseringen av generelle toppnivådomener har blitt mye mindre streng i de siste årene.</p>
+
+                <p>Til venstre for toppnivådomenet er domenet med kanskje den viktigste rollen, sett fra brukerens side. Dette er «navnet» som skal assosieres med innholdet. Det finnes regler på hvor mange tegn det kan være og hvilke tegn som ikke kan brukes, men stort sett er det opp til den som registrerer domenet hva det skal hete. Et godt domenenavn kan ha stor markedsverdi. Vi kommer tilbake til dette <a href="#seo">senere i artikkelen.</a></p>
+
+                <p>Helt til venstre finnes <em>subdomenet</em>. Avhengig av webserveren kan et domene ha flere subdomener som er ment å klassifisere innholdet. Eksempelvis kan www.bondegard.no referere til generelle nettsider, blogg.bondegard.no referere til blogg-innhold, og intranett.bondegard.no referere til interne sider. </p>
+
+                <h2>DNS</h2>
+
+                <p>Som nevnt over er et domene bare et «alias» for en webserver. IP-adressen er fortsatt den tekniske adressen som må brukes for å få kontakt med forskjellige nettsteder. <abbr title="Domain Name System">DNS</abbr> (Domain Name System) er systemet som gjør at vi kan bruke domener i stedet for å huske IP-adresser. Når vi ber en nettleser gå til vg.no sendes først en forespørsel til en DNS-server. Disse sitter med informasjon om hvilke IP-adresser de forskjellige domenene har, litt som en telefonbok. Den kan sende forespørselen videre om de ikke finner denne informasjonen, men lagrer det så for senere bruk når de får svar. DNS-serveren sender den riktige IP-adressen tilbake til nettleseren så du får kontakt med vg.no.</p>
+
+                <h2>URL</h2>
+
+                <p>En <abbr title="Uniform Resource Locator">URL</abbr> er den fulle adressen til en webserver, eller en ressurs på denne. En URL inneholder et domenenavn, men er en mer komplett beskrivelse. URL står for Uniform Resource Locator.</p>
+                <p>En URL består av en protokoll, domenenavn (med sine underdeler nevnt over), og en filsti (path).
+                <img class="img-responsive article-image" src="http://ask.hiof.no/~martr/webutvikling/oblig1/img/url.png" alt="url eksempel" width="400" />
+                Protokollen angir hvordan vi kommuniserer med nettstedet. De vanligste protokollene er <abbr title="HyperText Transfer Protocol">HTTP</abbr> (HyperText Transfer Protocol) og HTTPS (S står for secure, en sikrere variant) som er standard for utveksling av informasjon over websider. Det finnes andre protokoller som <abbr title="File Transfer Protocol">FTP</abbr> og MAILTO. Etter protokollen kommer et skille <code>://</code> og så domenenavnet. Disse er beskrevet i detalj over.</p>
+                
+                <p>Etter domenenavnet angis filstien, som representerer mappestrukturen på serveren og hvor den endelige ressursen befinner seg. I filstien kan man også angi et referansepunkt inni en fil. Eks. <code id="url">http://www.bondegard.no/dyr/kuer.html#dagros</code>– referer til ankerpunktet dagros inni filen kuer.html, som ligger i mappen dyr, på webserveren bondegard.no. Ved siden av ankere kan man også finne spørringer og parametere hvis websiden er dynamisk. I tillegg til alt dette kan man også i en URL spesifisere hvilken port som skal brukes, men dette er ikke spesielt vanlig for http-adresser.</p>
+
+                <h2 id="seo">Om domenenavn og søkemotor-optimalisering <abbr title="Search Engine Optimalization">(SEO)</abbr></h2>
+
+                <p>Domenenavnet er et viktig valg og har mye å si for synligheten på nettet. For en tid tilbake var det populært å sørge for at nettstedene samssvarte med spesifikke nøkkelord som var relevant for siden. Eksempelvis "buy cheap jeans" var et lukrativt søk på google, hvorfor ikke kalle nettsiden buycheapjeans.com? Det dukket opp tusenvis av slike sider på nettet en stund og de fikk mye treff, men ofte var de av heller laber kvalitet innholdsmessig og de hindret seriøse aktører fra å dukke opp først i søkeresultatene. Google sørget for å endre algoritmene i søkeresultater som direkte hemmet slike "<abbr title="Exact Match Domains">EMD</abbr>s" (Exact Match Domains). Det er derfor ikke anbefalt å navngi domenene slik.</p>
+
+                <p>Derimot er det anbefalt for god SEO at domenenavnet samsvarer med merkevaren du vil bygge opp. Det skaper trygghet for lesere. Domenenavnet bør være kort, lett å huske, lett å skrive og lett å uttale. Vi har mer positive følelser for ting vi kan lett si og tenke på. SEO ser på tilgjengelighet og brukervennlighet, så jo lettere det er å lese for mennesker, jo lettere er det for søkemotorer.</p>
+            </article>
+	</main>
+	<footer>
+		<p>Copywrite Martin Røsok 2017</p>
+		<p><a href="aboutpage.html" style="color:white;">Om denne siden</a></p>
+	</footer>
+</div>
+</body>	
+</html>

@@ -1,45 +1,25 @@
 <!doctype html>
 <html>
 <head>
-	<title>Test Grid</title>
+	<title>Obliger</title>
 	<meta charset ="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="normalize.css" rel="stylesheet" />
-	<link href="style.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|PT+Sans" rel="stylesheet" />
-	<script>
-		function accordion() {
-			console.log("knapp trukket");
-			var x = document.getElementById("accordion");
-			var y = document.getElementById("accordion-button");
-			if (x.className.indexOf("show") == -1) {
-				x.className = x.className.replace("hide", "");
-				x.className += "show";
-				y.innerHTML = y.innerHTML.replace("+", "-");
-			} else {
-				x.className = x.className.replace("show", "hide");
-				y.innerHTML = y.innerHTML.replace("-", "+");
-			}
-		}
-	</script> 
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans" rel="stylesheet" />
 </head>
 <body>
 	<header class="sidebar-left">
 		<div class="mast">
-			<img src="logo1.png">
+			<img src="img/logo1.png">
 		</div>
-		<nav>
+		<nav id="mainmenu">
 			<ul>
 				<li><a href="index.html">Hjem</a></li>
 				<li><a href="artikler.html">Artikler</a></li>
 				<li><a href="obliger.html">Obliger</a></li>
-				<li id="accordion-button" onclick="accordion()">Ressurser +
-					<ul id="accordion" class="hide">
-						<li><a href="webutvikling.html">Webutvikling</a></li>
-						<li><a href="infprog.html">InfProg</a></li>
-						<li><a href="grit.html">Grit</a></li>
-					</ul>
-				</li>
+				<li><a href="index.html#webutvikling">Webutvikling</a></li>
+				<li><a href="index.html#infprog">Infprog</a></li>
 				<li><a href="about.html">Om meg</a></li>
 				<li id="icon">&#9776;</li>
 			</ul>
@@ -49,6 +29,9 @@
 	<div class="banner">
 	</div>
 	<main>
+		<div class="breadcrumb">
+			Du er her: <a href="index.html">Hjem\</a>Obliger
+		</div>
 		<h1 class="main-header"> Obliger 2017</h1>
 		<div class="oblig-table">
 		<table>
@@ -56,7 +39,7 @@
 				<th>Webutvikling</th><th>InfProg</th>
 			</tr>
 			<tr>
-				<td><a href="#">Oblig 1</a></td><td><a href="#">Oblig 1</a></td>
+				<td><a href="http://ask.hiof.no/~martr/webutvikling/oblig1/index.html">Oblig 1</a></td><td><a href="http://ask.hiof.no/~martr/infprog/oblig1/index.html">Oblig 1</a></td>
 			</tr>
 			<tr>
 				<td><a href="#">Oblig 2</a></td><td><a href="#">Oblig 2</a></td>
@@ -76,7 +59,7 @@
 
 	<footer>
 		<p>Copywrite Martin Røsok 2017</p>
-		<p>Om denne siden</p>
+		<p><a href="aboutpage.html" style="color:white;">Om denne siden</a></p>
 	</footer>
 </div>
 </body>	

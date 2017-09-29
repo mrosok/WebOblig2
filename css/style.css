@@ -201,7 +201,7 @@ abbr {
 
 .main-header {
 	line-height: 1;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	margin-left: 0.5em;
 }
 
@@ -215,6 +215,11 @@ abbr {
 
 .article-card-index {
 	width: 30%;
+}
+
+.header-link {
+	text-decoration: none;
+	color: black;
 }
 
 .flex-container {
@@ -305,20 +310,15 @@ footer {
 	color: red;
 }
 
-.oblig-table {
-	max-width: 40%;
-	margin: 0 auto;
-}
-
 .oblig-table table{
 	font-size: 26px;
 	padding: 1.5rem;
-	border: 1px solid;
+	text-align: left;
 }
 
-.oblig-table table td {
-	width: 140px;
-	padding-left: 5px;
+.oblig-table table td, .oblig-table table th {
+	width: 150px;
+	padding-left: 35px;
 }
 
 .timeplan {
